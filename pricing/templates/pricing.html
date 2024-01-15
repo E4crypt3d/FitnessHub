@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Pricing
+{% endblock title %}
+
+
+{% block activepricing %}act{% endblock activepricing %}
+{% block activepricingm %}act{% endblock activepricingm %}
+
+
+{% block content %}
+<div class="flex flex-col md:mt-20 my-6 mt-16 text-white">
+    <div class="flex justify-center mx-3">
+        <p class="font-extrabold text-2xl md:text-7xl uppercase text-[#def0ffcc]">Membership<span
+                class="md:ml-8 mx-3 text-[#caca00d6]">Pricing</span>
+        </p>
+    </div>
+</div>
+
+<div class="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mx-auto">
+    {% for pricing in pricings %}
+    <div
+        class="shadow p-5 bg-[#00000080] hover:bg-[#000000c4] hover:scale-105 transition-all rounded-lg border-t-4 border-green-400 ">
+        <p class="uppercase text-sm font-medium text-gray-200">
+            {{pricing.name}}
+        </p>
+
+        <p class="mt-4 text-3xl text-gray-300 font-medium">
+            Rs. {{pricing.price}}
+
+            {% if pricing.discount_price is not null %}
+            <span class="text-2xl text-gray-400 line-through">Rs.
+                {{pricing.discount_price}}</span>
+            {% endif %}
+        </p>
+
+        <p class="mt-4 font-medium text-gray-400">
+            {{pricing.details}}
+        </p>
+
+        <div class="mt-8">
+            <ul class="grid grid-cols-1 gap-4">
+                <li class="inline-flex items-center text-gray-400">
+                    <svg class="w-4 h-4 mr-2 fill-current text-green-400" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                            d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM371.8 211.8l-128 128C238.3 345.3 231.2 348 224 348s-14.34-2.719-19.81-8.188l-64-64c-10.91-10.94-10.91-28.69 0-39.63c10.94-10.94 28.69-10.94 39.63 0L224 280.4l108.2-108.2c10.94-10.94 28.69-10.94 39.63 0C382.7 183.1 382.7 200.9 371.8 211.8z">
+                        </path>
+                    </svg>
+
+                    1 {{pricing.membership_time}} only
+                </li>
+
+
+                {% if pricing.discount_price is not null  %}
+
+
+                <li class="inline-flex items-center text-gray-400">
+                    <svg class="w-4 h-4 mr-2 fill-current text-green-400" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                            d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM371.8 211.8l-128 128C238.3 345.3 231.2 348 224 348s-14.34-2.719-19.81-8.188l-64-64c-10.91-10.94-10.91-28.69 0-39.63c10.94-10.94 28.69-10.94 39.63 0L224 280.4l108.2-108.2c10.94-10.94 28.69-10.94 39.63 0C382.7 183.1 382.7 200.9 371.8 211.8z">
+                        </path>
+                    </svg>
+
+                    {{pricing.discount_percentage}}% Discount
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+{% endblock content %}

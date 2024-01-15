@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+	.bg-img-none {
+		background-image: none !important;
+	}
+}
+
+@layer components {
+	.act {
+		@apply glass bg-img-none;
+	}
+}

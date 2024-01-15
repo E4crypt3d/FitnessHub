@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}
+Announcements
+{% endblock title %}
+
+
+{% block activeannouncements %}
+act
+{% endblock activeannouncements %}
+{% block activeannouncementsm %}
+act
+{% endblock activeannouncementsm %}
+
+
+{% block content %}
+<div class="flex flex-col md:mt-20 my-6 mt-16 text-white">
+    <div class="flex justify-center mx-3">
+        <p class="font-extrabold text-2xl md:text-7xl uppercase text-[#def0ffcc]">Announce<span
+                class=" text-[#caca00d6]">ments</span>
+        </p>
+    </div>
+</div>
+
+<div class="flex flex-col justify-center bg-[#00000080] px-5 py-5 rounded-md">
+    <div class="flex flex-col w-full border-opacity-50">
+        <div class="grid h-20 card rounded-box place-items-center font-bold text-lg uppercase">Announcements Updates
+        </div>
+        <div class="divider"></div>
+    </div>
+    {% if specials %}
+    <!-- Specials -->
+    <div class="flex md:flex-row flex-col gap-5">
+        <div class="content-start font-bold md:w-[25%] uppercase text-center md:text-start">Exercise, Specials and More
+        </div>
+        <div class="mx-auto md:w-[100%] bg-[#0000004f] md:bg-transparent p-4">
+            {% for special in specials %}
+            <ul class="my-2">
+                <li class="font-semibold list-disc text-[#eee7e7]">{{special.title}}</li>
+                <li class="text-[#c4c4c4]">
+                    {{special.body|safe}}
+                </li>
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="divider"></div>
+    {% endif %}
+
+    {% if schedules %}
+    <!-- Schedule Updates & More! -->
+    <div class="flex md:flex-row flex-col gap-5">
+        <div class="content-start md:w-[25%] font-bold uppercase text-center md:text-start">Schedule Updates
+        </div>
+        <div class="mx-auto md:w-[100%] bg-[#0000004f] md:bg-transparent p-4">
+            {% for schedule in schedules %}
+            <ul class="my-2">
+                <li class="font-semibold list-disc text-[#eee7e7]">{{schedule.title}}</li>
+                <li class="text-[#c4c4c4]">
+                    {{schedule.body|safe}}
+                </li>
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+    {% if ddp %}
+    <div class="divider"></div>
+    <!-- DISCOUNTS, DEALS, and PROMOS! -->
+    <div class="flex md:flex-row flex-col gap-5">
+        <div class="content-start font-bold md:w-[25%] uppercase text-center md:text-start">DISCOUNTS, DEALS, and
+            PROMOS!</div>
+        <div class="mx-auto md:w-[100%] bg-[#0000004f] md:bg-transparent p-4">
+            {% for d in ddp %}
+            <ul class="my-2">
+                <li class="font-semibold list-disc text-[#eee7e7]">{{d.title}}</li>
+                <li class="text-[#c4c4c4]">
+                    {{d.body|safe}}
+                </li>
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock content %}

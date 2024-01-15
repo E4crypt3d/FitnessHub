@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+Home
+{% endblock title %}
+
+
+
+{% block content %}
+<div class="flex flex-col md:mt-36 mt-24 text-white">
+    <div class="flex justify-end mx-3">
+        <p class="font-extrabold text-4xl md:text-9xl uppercase text-[#def0ffcc]">FITNESS<span
+                class="md:ml-8 mx-3 text-[#caca00d6]">HUB</span>
+        </p>
+    </div>
+    <div class="flex justify-start">
+        <div class="font-bold text-xl md:text-6xl antialiased text-[#caca00d6] uppercase">
+            <p><span class="md:text-7xl text-2xl mx-3 text-[#def0ffcc]">Stronger</span>Every Day</p>
+        </div>
+    </div>
+    <div class="flex flex-col mx-3 rounded-lg px-2 py-2">
+        <p class="uppercase md:text-base antialiased text-sm text-base-content">
+            Transform Your Life at Fitness Hub: Your Ultimate Destination for Health and Wellness.
+        </p>
+        <p class="uppercase md:text-sm text-xs text-base-content">
+            Unleash Your Potential, Sculpt Your Body, and Embrace a Healthier You. Join Fitness Hub for a Journey of
+            Fitness, Fun, and Fulfillment.
+        </p>
+        <div class="mx-3 mt-10"><a href="{% url 'pricing' %}"
+                class="btn bg-[#caca0033] border-none hover:bg-[#a7b216] transition-all duration-300 ease-in hover:text-neutral hover:font-bold text-white">Join
+                Today</a></div>
+    </div>
+</div>
+<!-- DESC ENDs -->
+<div class="flex flex-col my-8 md:gap-4 gap-10">
+
+    <div class="card lg:card-side bg-[#00000080] hover:bg-[#000000c4] hover:scale-[1.02] transition-all shadow-xl">
+        <figure class="min-w-[50%]"><img src="{% static 'img/home/Programs.jpg' %}" alt="Programs" /></figure>
+        <div class="card-body">
+            <h2 class="card-title">Exercises</h2>
+            <p>Explore a diverse range of workouts and exercises tailored to your goals. Check our available exercises
+                and elevate your fitness journey with us! 💪🏋️‍♀️</p>
+            <div class="card-actions justify-end">
+                <a href="{% url 'programs' %}"
+                    class="btn bg-[#caca0033] border-none hover:text-neutral hover:bg-[#a7b216] transition-all duration-300 ease-in hover:font-bold text-white">Check
+                    Out</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card lg:card-side bg-[#00000080] hover:bg-[#000000c4] hover:scale-[1.02] transition-all shadow-xl">
+        <figure class="min-w-[50%]"><img src="{% static 'img/home/schedule.jpg' %}" alt="Schedule" /></figure>
+        <div class="card-body">
+            <h2 class="card-title">Schedule</h2>
+            <p>Don't miss a beat – keep an eye out for our newest class schedules to plan your workouts effectively.
+                Your fitness routine, your way! 💪📅</p>
+            <div class="card-actions justify-end">
+                <a href="{% url 'schedule' %}"
+                    class="btn bg-[#caca0033] border-none hover:text-neutral hover:bg-[#a7b216] transition-all duration-300 ease-in hover:font-bold text-white">Check
+                    Out</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card lg:card-side bg-[#00000080] hover:bg-[#000000c4] hover:scale-[1.02] transition-all shadow-xl">
+        <figure class="min-w-[50%]"><img src="{% static 'img/home/Announcements.jpg' %}" alt="Announcements" /></figure>
+        <div class="card-body">
+            <h2 class="card-title">Announcements</h2>
+            <p>Discover new schedules and hot deals to elevate your fitness experience. Check back regularly for the
+                latest announcements. Your journey to a healthier you just got even more exciting! 💪✨</p>
+            <div class="card-actions justify-end">
+                <button
+                    class="btn bg-[#caca0033] border-none hover:text-neutral hover:bg-[#a7b216] transition-all duration-300 ease-in hover:font-bold text-white">Check
+                    Out</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CARDS END -->
+{% endblock content %}
