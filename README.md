@@ -38,27 +38,23 @@ Pricing
 
 Clone the repository:
 
-```
-bash
+```bash
 git clone https://github.com/your-username/FitnessHub.git
 ```
 
 Install dependencies:
 
-```
-bash
+```bash
 pip install -r requirements.txt
 Apply migrations:
 ```
 
-```
-bash
+```bash
 python manage.py migrate
 Run the development server:
 ```
 
-```
-bash
+```bash
 python manage.py runserver
 Visit http://localhost:8000 to explore FitnessHub locally.
 ```
