@@ -2268,16 +2268,6 @@ html {
   color: rgb(202 138 4 / var(--tw-text-opacity));
 }
 
-.text-green-100 {
-  --tw-text-opacity: 1;
-  color: rgb(220 252 231 / var(--tw-text-opacity));
-}
-
-.text-red-100 {
-  --tw-text-opacity: 1;
-  color: rgb(254 226 226 / var(--tw-text-opacity));
-}
-
 .line-through {
   text-decoration-line: line-through;
 }
