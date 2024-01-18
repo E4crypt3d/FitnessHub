@@ -21,9 +21,9 @@ act
     </div>
 </div>
 
-<div class="flex flex-col justify-center bg-[#00000080] px-5 py-5 rounded-md">
+<div class="flex flex-col justify-center bg-[#00000080] my-10 px-5 py-5 rounded-md">
     <div class="flex flex-col w-full border-opacity-50">
-        <div class="grid h-20 card rounded-box place-items-center font-bold text-lg uppercase">Announcements Updates
+        <div class="grid h-20 card rounded-box place-items-center font-bold text-lg uppercase">Latest Updates
         </div>
         <div class="divider"></div>
     </div>
@@ -36,7 +36,7 @@ act
             {% for special in specials %}
             <ul class="my-2">
                 <li class="font-semibold list-disc text-[#eee7e7]">{{special.title}}</li>
-                <li class="text-[#c4c4c4]">
+                <li class="text-[#c4c4c4] ml-6 font-medium">
                     {{special.body|safe}}
                 </li>
             </ul>
@@ -55,7 +55,7 @@ act
             {% for schedule in schedules %}
             <ul class="my-2">
                 <li class="font-semibold list-disc text-[#eee7e7]">{{schedule.title}}</li>
-                <li class="text-[#c4c4c4]">
+                <li class="text-[#c4c4c4] ml-6 font-medium">
                     {{schedule.body|safe}}
                 </li>
             </ul>
@@ -73,7 +73,7 @@ act
             {% for d in ddp %}
             <ul class="my-2">
                 <li class="font-semibold list-disc text-[#eee7e7]">{{d.title}}</li>
-                <li class="text-[#c4c4c4]">
+                <li class="text-[#c4c4c4] ml-6 font-medium">
                     {{d.body|safe}}
                 </li>
             </ul>

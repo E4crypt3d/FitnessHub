@@ -6,10 +6,10 @@
 	.bg-img-none {
 		background-image: none !important;
 	}
-}
-
-@layer components {
 	.act {
-		@apply glass bg-img-none;
+		background-color: rgba(255, 255, 255, 0.199);
 	}
 }
+
+/* @layer components {
+} */

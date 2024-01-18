@@ -2,10 +2,6 @@
 
 Welcome to FitnessHub - Your Ultimate Fitness Destination powered by Django and designed with Tailwind CSS.
 
-## Overview
-
-FitnessHub is a comprehensive fitness website with distinct apps catering to various aspects of your fitness journey.
-
 ## Apps
 
 Home

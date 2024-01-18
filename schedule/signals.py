@@ -16,7 +16,6 @@ def handle_announcement_schedule(instance):
             <p>Your commitment to fitness is truly commendable, and we look forward to seeing you at this upcoming session.</p>
             <p> Best Regards,<p>
             <p> The FITNESS HUB Team</p>
-
                 '''
     }
     return templates
@@ -29,7 +28,10 @@ def annouce_schedule(sender, instance, created, **kwargs):
         announcement = instance.announcement
         announcement.title = templates['title']
         announcement.body = templates['body']
-        announcement.active = True
+        if instance.available:
+            announcement.active = True
+        else:
+            announcement.active = False
         announcement.save()
     else:
         cat = 'Schedule Updates'

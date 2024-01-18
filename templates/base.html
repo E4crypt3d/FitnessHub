@@ -10,7 +10,7 @@
 </head>
 
 <body style="background-image: url({% static 'img/bg.jpg' %});" class="h-full min-h-screen bg-cover flex flex-col">
-    <div class="navbar hover:glass  transition-all duration-150 border-none ease-in-out bg-img-none">
+    <div class="navbar transition-all duration-150 border-none ease-in-out bg-[#00000080] hover:bg-[#000000c4]">
         <div class="navbar-start">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -21,7 +21,7 @@
                     </svg>
                 </div>
                 <ul tabindex="0"
-                    class="menu menu-sm bg-transparent glass dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    class="menu menu-sm bg-[#00000080] hover:bg-[#000000c4] transition-all dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52">
                     <li><a href="{% url 'programs' %}"
                             class="{% block activeprogramm %}{% endblock activeprogramm %}">Exercises</a></li>
                     <li><a href="{% url 'schedule' %}"
@@ -54,8 +54,8 @@
             </ul>
         </div>
         <div class="navbar-end">
-            <a
-                class="btn bg-[#caca0033] border-none hover:bg-[#a7b216] transition-all duration-300 ease-in hover:text-neutral hover:font-bold text-white">Button</a>
+            <!-- <a
+                class="btn bg-[#caca0033] border-none hover:bg-[#a7b216] transition-all duration-300 ease-in hover:text-neutral hover:font-bold text-white">Button</a> -->
         </div>
     </div>
     <div class="container mx-auto">
@@ -64,7 +64,8 @@
         {% endblock content %}
     </div>
     <!-- FOOTER -->
-    <footer class="footer mt-auto items-center p-4 bg-transparent hover:glass text-neutral-content bg-img-none">
+    <footer
+        class="footer mt-auto items-center p-4 text-neutral-content bg-[#00000080] hover:bg-[#000000c4] transition-all">
         <aside class="items-center grid-flow-col mx-auto">
             <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
                 clip-rule="evenodd" class="fill-current">
