@@ -6,7 +6,6 @@ Welcome to FitnessHub - Your Ultimate Fitness Destination powered by Django and 
 
 Home
 
-- User: Manage your profile and fitness preferences.
 - Home: Explore the main landing page with featured content.
 - About: Learn more about FitnessHub and its mission.
 
