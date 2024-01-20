@@ -9,7 +9,7 @@ def handle_announcement_exercise(instance):
         'title': '🏋️‍♂️ Introducing New Exercise at FITNESS HUB!',
         'body': f'''
             <ul>
-            <li>- 🌟 "{instance.title}"</li>
+            <li>- 🌟 {instance.title}</li>
             <li>- 💪 {instance.body}<li>
             </ul>
             <p>🚀 Try it out during your next session and feel the burn! Stay tuned for more exciting updates on our ever-evolving fitness offerings.</p>

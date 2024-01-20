@@ -10,7 +10,7 @@ class ScheduleManager(models.Manager):
 
 class Schedule(models.Model):
     title = models.CharField(max_length=90)
-    max_participants = models.PositiveIntegerField(default=25)
+    max_participants = models.PositiveIntegerField(default=20)
     current_participants = models.PositiveIntegerField(
         default=0)
     start_time = models.TimeField()
